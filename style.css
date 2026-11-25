@@ -117,22 +117,22 @@ footer {
     width: 100%;
 }
 
-/* Week 11: On mobile, show one adventure card per row. */
+        /* Week 11  mobile show one adventure card per row. */
 #sports > .sport-card {
     box-sizing: border-box;
     width: 100%;
 }
 
-/* Week 11: On tablets, show two cards per row. */
+        /* Week 11 tablets show two cards per row. */
 @media (min-width: 600px) {
     #sports > .sport-card {
         width: calc(50% - 10px);
     }
 }
 
-/* Week 11: On desktops, show three cards per row. */
+        /* Week 11 desktops show three cards per row. */
 @media (min-width: 1025px) {
     #sports > .sport-card {
-        width: calc((100% - 40px) );
+        width: calc((100% - 40px) / 3);
     }
 }

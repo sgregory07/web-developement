@@ -133,6 +133,6 @@ footer {
 /* Week 11: On desktops, show three cards per row. */
 @media (min-width: 1025px) {
     #sports > .sport-card {
-        width: calc((100% - 40px) / 3);
+        width: calc((100% - 40px) );
     }
 }

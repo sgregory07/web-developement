@@ -3,7 +3,7 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     font-size: 18px;
-    background-color: #eef5f9;  /* Week 8 18px size + 1.5 line height */
+    background-color: #eef5f9;  /* Week 8 18px size + 1.5 line height + arial font */
     color: #243b53;
     line-height: 1.5;
 }
@@ -36,10 +36,12 @@ nav a {
     display: inline-block;
     color: white;
     margin: 10px;
+    transition: color 0.3s;    /* week 11 Smoothly change the link colour over 0.3 seconds on hover. */
 }
 
+
 nav a:hover {
-    color: lightblue;
+    color: lightblue; /* changes colour when you hover over it */
 }
 
 /* Main content */
@@ -101,4 +103,36 @@ footer {
     color: white;
     text-align: center;
     padding: 15px;
+}
+
+
+#sports {      /* Week 11 Use Flexbox to arrange the adventure cards and let them wrap. */  
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+#sports h2 {    /* Week 11 Give the Featured adventures heading its own row. */
+    width: 100%;
+}
+
+/* Week 11: On mobile, show one adventure card per row. */
+#sports > .sport-card {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* Week 11: On tablets, show two cards per row. */
+@media (min-width: 600px) {
+    #sports > .sport-card {
+        width: calc(50% - 10px);
+    }
+}
+
+/* Week 11: On desktops, show three cards per row. */
+@media (min-width: 1025px) {
+    #sports > .sport-card {
+        width: calc((100% - 40px) / 3);
+    }
 }
